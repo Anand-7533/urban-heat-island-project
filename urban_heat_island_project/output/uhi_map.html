@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2ca5a79f0974bda48109be8141b7f4ff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2ca5a79f0974bda48109be8141b7f4ff" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2ca5a79f0974bda48109be8141b7f4ff = L.map(
+                "map_2ca5a79f0974bda48109be8141b7f4ff",
+                {
+                    center: [13.021469481499997, 80.19696781],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5127d72c9c3bd7d81504d2d86c6b575f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5127d72c9c3bd7d81504d2d86c6b575f.addTo(map_2ca5a79f0974bda48109be8141b7f4ff);
+        
+    
+        function geo_json_1b6cd0bbbce2e38e2cffe12de728095c_styler(feature) {
+            switch(feature.id) {
+                case "0": case "13": case "20": case "21": case "24": case "31": case "33": case "34": case "38": case "40": case "43": case "47": case "52": case "56": case "58": case "65": case "68": case "71": case "73": case "77": case "78": case "84": case "86": case "94": case "96": case "99": 
+                    return {"color": "black", "fillColor": "#FC4E2A", "fillOpacity": 0.7, "weight": 0.3};
+                case "1": case "4": case "5": case "6": case "7": case "15": case "18": case "22": case "26": case "30": case "32": case "35": case "37": case "42": case "44": case "48": case "53": case "54": case "57": case "59": case "61": case "63": case "66": case "67": case "69": case "70": case "72": case "75": case "76": case "80": case "88": case "89": case "91": case "92": case "93": 
+                    return {"color": "black", "fillColor": "#E31A1C", "fillOpacity": 0.7, "weight": 0.3};
+                case "2": case "3": case "8": case "10": case "11": case "12": case "17": case "23": case "25": case "27": case "28": case "29": case "39": case "41": case "45": case "49": case "51": case "55": case "60": case "62": case "64": case "74": case "79": case "81": case "82": case "83": case "85": case "87": case "90": case "98": 
+                    return {"color": "black", "fillColor": "#BD0026", "fillOpacity": 0.7, "weight": 0.3};
+                case "14": case "16": case "19": case "36": case "46": case "50": case "95": case "97": 
+                    return {"color": "black", "fillColor": "#FD8D3C", "fillOpacity": 0.7, "weight": 0.3};
+                default:
+                    return {"color": "black", "fillColor": "#800026", "fillOpacity": 0.7, "weight": 0.3};
+            }
+        }
+
+        function geo_json_1b6cd0bbbce2e38e2cffe12de728095c_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_1b6cd0bbbce2e38e2cffe12de728095c = L.geoJson(null, {
+                onEachFeature: geo_json_1b6cd0bbbce2e38e2cffe12de728095c_onEachFeature,
+            
+                style: geo_json_1b6cd0bbbce2e38e2cffe12de728095c_styler,
+            ...{
+}
+        });
+
+        function geo_json_1b6cd0bbbce2e38e2cffe12de728095c_add (data) {
+            geo_json_1b6cd0bbbce2e38e2cffe12de728095c
+                .addData(data);
+        }
+            geo_json_1b6cd0bbbce2e38e2cffe12de728095c_add({"bbox": [80.1025112, 12.90002859, 80.29946457, 13.14721527], "features": [{"bbox": [80.16532898, 13.0042555, 80.16532898, 13.0042555], "geometry": {"coordinates": [80.16532898, 13.0042555], "type": "Point"}, "id": "0", "properties": {"latitude": 13.0042555, "longitude": 80.16532898, "predicted_temp": 35.211978015900016}, "type": "Feature"}, {"bbox": [80.20541162, 13.08008112, 80.20541162, 13.08008112], "geometry": {"coordinates": [80.20541162, 13.08008112], "type": "Point"}, "id": "1", "properties": {"latitude": 13.08008112, "longitude": 80.20541162, "predicted_temp": 36.8644714558}, "type": "Feature"}, {"bbox": [80.27718842, 12.90002859, 80.27718842, 12.90002859], "geometry": {"coordinates": [80.27718842, 12.90002859], "type": "Point"}, "id": "2", "properties": {"latitude": 12.90002859, "longitude": 80.27718842, "predicted_temp": 38.50162480770001}, "type": "Feature"}, {"bbox": [80.17145395, 12.97558314, 80.17145395, 12.97558314], "geometry": {"coordinates": [80.17145395, 12.97558314], "type": "Point"}, "id": "3", "properties": {"latitude": 12.97558314, "longitude": 80.17145395, "predicted_temp": 38.13216044149999}, "type": "Feature"}, {"bbox": [80.28170703, 12.93668897, 80.28170703, 12.93668897], "geometry": {"coordinates": [80.28170703, 12.93668897], "type": "Point"}, "id": "4", "properties": {"latitude": 12.93668897, "longitude": 80.28170703, "predicted_temp": 36.06820099660001}, "type": "Feature"}, {"bbox": [80.22467202, 12.92308465, 80.22467202, 12.92308465], "geometry": {"coordinates": [80.22467202, 12.92308465], "type": "Point"}, "id": "5", "properties": {"latitude": 12.92308465, "longitude": 80.22467202, "predicted_temp": 36.14982885190003}, "type": "Feature"}, {"bbox": [80.10316425, 12.94656505, 80.10316425, 12.94656505], "geometry": {"coordinates": [80.10316425, 12.94656505], "type": "Point"}, "id": "6", "properties": {"latitude": 12.94656505, "longitude": 80.10316425, "predicted_temp": 36.34391603409995}, "type": "Feature"}, {"bbox": [80.28588745, 12.98639018, 80.28588745, 12.98639018], "geometry": {"coordinates": [80.28588745, 12.98639018], "type": "Point"}, "id": "7", "properties": {"latitude": 12.98639018, "longitude": 80.28588745, "predicted_temp": 36.89041102299995}, "type": "Feature"}, {"bbox": [80.23817938, 12.99919187, 80.23817938, 12.99919187], "geometry": {"coordinates": [80.23817938, 12.99919187], "type": "Point"}, "id": "8", "properties": {"latitude": 12.99919187, "longitude": 80.23817938, "predicted_temp": 39.03644210300001}, "type": "Feature"}, {"bbox": [80.29946457, 13.03470418, 80.29946457, 13.03470418], "geometry": {"coordinates": [80.29946457, 13.03470418], "type": "Point"}, "id": "9", "properties": {"latitude": 13.03470418, "longitude": 80.29946457, "predicted_temp": 40.15172938839996}, "type": "Feature"}, {"bbox": [80.1344681, 13.00479863, 80.1344681, 13.00479863], "geometry": {"coordinates": [80.1344681, 13.00479863], "type": "Point"}, "id": "10", "properties": {"latitude": 13.00479863, "longitude": 80.1344681, "predicted_temp": 38.44291803539998}, "type": "Feature"}, {"bbox": [80.12742715, 13.07130488, 80.12742715, 13.07130488], "geometry": {"coordinates": [80.12742715, 13.07130488], "type": "Point"}, "id": "11", "properties": {"latitude": 13.07130488, "longitude": 80.12742715, "predicted_temp": 39.83078232830003}, "type": "Feature"}, {"bbox": [80.28651909, 12.95111306, 80.28651909, 12.95111306], "geometry": {"coordinates": [80.28651909, 12.95111306], "type": "Point"}, "id": "12", "properties": {"latitude": 12.95111306, "longitude": 80.28651909, "predicted_temp": 38.72371465720001}, "type": "Feature"}, {"bbox": [80.23936363, 13.11952936, 80.23936363, 13.11952936], "geometry": {"coordinates": [80.23936363, 13.11952936], "type": "Point"}, "id": "13", "properties": {"latitude": 13.11952936, "longitude": 80.23936363, "predicted_temp": 34.64352103389996}, "type": "Feature"}, {"bbox": [80.11320003, 12.9068469, 80.11320003, 12.9068469], "geometry": {"coordinates": [80.11320003, 12.9068469], "type": "Point"}, "id": "14", "properties": {"latitude": 12.9068469, "longitude": 80.11320003, "predicted_temp": 33.54968820990001}, "type": "Feature"}, {"bbox": [80.25109261, 13.06761688, 80.25109261, 13.06761688], "geometry": {"coordinates": [80.25109261, 13.06761688], "type": "Point"}, "id": "15", "properties": {"latitude": 13.06761688, "longitude": 80.25109261, "predicted_temp": 36.56228380360003}, "type": "Feature"}, {"bbox": [80.25077524, 13.0043262, 80.25077524, 13.0043262], "geometry": {"coordinates": [80.25077524, 13.0043262], "type": "Point"}, "id": "16", "properties": {"latitude": 13.0043262, "longitude": 80.25077524, "predicted_temp": 32.31179323290002}, "type": "Feature"}, {"bbox": [80.28460491, 13.03967246, 80.28460491, 13.03967246], "geometry": {"coordinates": [80.28460491, 13.03967246], "type": "Point"}, "id": "17", "properties": {"latitude": 13.03967246, "longitude": 80.28460491, "predicted_temp": 39.52704485289995}, "type": "Feature"}, {"bbox": [80.24230495, 12.93509673, 80.24230495, 12.93509673], "geometry": {"coordinates": [80.24230495, 12.93509673], "type": "Point"}, "id": "18", "properties": {"latitude": 12.93509673, "longitude": 80.24230495, "predicted_temp": 36.0818676691}, "type": "Feature"}, {"bbox": [80.12485419, 12.94952537, 80.12485419, 12.94952537], "geometry": {"coordinates": [80.12485419, 12.94952537], "type": "Point"}, "id": "19", "properties": {"latitude": 12.94952537, "longitude": 80.12485419, "predicted_temp": 33.31938566249999}, "type": "Feature"}, {"bbox": [80.10397603, 13.10018614, 80.10397603, 13.10018614], "geometry": {"coordinates": [80.10397603, 13.10018614], "type": "Point"}, "id": "20", "properties": {"latitude": 13.10018614, "longitude": 80.10397603, "predicted_temp": 34.63601004559998}, "type": "Feature"}, {"bbox": [80.1052422, 13.14206539, 80.1052422, 13.14206539], "geometry": {"coordinates": [80.1052422, 13.14206539], "type": "Point"}, "id": "21", "properties": {"latitude": 13.14206539, "longitude": 80.1052422, "predicted_temp": 35.17537637830005}, "type": "Feature"}, {"bbox": [80.1056613, 12.97835604, 80.1056613, 12.97835604], "geometry": {"coordinates": [80.1056613, 12.97835604], "type": "Point"}, "id": "22", "properties": {"latitude": 12.97835604, "longitude": 80.1056613, "predicted_temp": 37.73851787390001}, "type": "Feature"}, {"bbox": [80.14924221, 13.07308065, 80.14924221, 13.07308065], "geometry": {"coordinates": [80.14924221, 13.07308065], "type": "Point"}, "id": "23", "properties": {"latitude": 13.07308065, "longitude": 80.14924221, "predicted_temp": 38.09083426290003}, "type": "Feature"}, {"bbox": [80.27200559, 13.11909729, 80.27200559, 13.11909729], "geometry": {"coordinates": [80.27200559, 13.11909729], "type": "Point"}, "id": "24", "properties": {"latitude": 13.11909729, "longitude": 80.27200559, "predicted_temp": 35.03551665640002}, "type": "Feature"}, {"bbox": [80.20776621, 13.12365167, 80.20776621, 13.12365167], "geometry": {"coordinates": [80.20776621, 13.12365167], "type": "Point"}, "id": "25", "properties": {"latitude": 13.12365167, "longitude": 80.20776621, "predicted_temp": 39.88285828779995}, "type": "Feature"}, {"bbox": [80.2105644, 12.92126105, 80.2105644, 12.92126105], "geometry": {"coordinates": [80.2105644, 12.92126105], "type": "Point"}, "id": "26", "properties": {"latitude": 12.92126105, "longitude": 80.2105644, "predicted_temp": 37.79266149129996}, "type": "Feature"}, {"bbox": [80.26840618, 12.9097637, 80.26840618, 12.9097637], "geometry": {"coordinates": [80.26840618, 12.9097637], "type": "Point"}, "id": "27", "properties": {"latitude": 12.9097637, "longitude": 80.26840618, "predicted_temp": 39.56891035870004}, "type": "Feature"}, {"bbox": [80.12483466, 12.9424576, 80.12483466, 12.9424576], "geometry": {"coordinates": [80.12483466, 12.9424576], "type": "Point"}, "id": "28", "properties": {"latitude": 12.9424576, "longitude": 80.12483466, "predicted_temp": 38.76704456820004}, "type": "Feature"}, {"bbox": [80.15583674, 13.11953563, 80.15583674, 13.11953563], "geometry": {"coordinates": [80.15583674, 13.11953563], "type": "Point"}, "id": "29", "properties": {"latitude": 13.11953563, "longitude": 80.15583674, "predicted_temp": 39.25616746690004}, "type": "Feature"}, {"bbox": [80.21715185, 12.92458671, 80.21715185, 12.92458671], "geometry": {"coordinates": [80.21715185, 12.92458671], "type": "Point"}, "id": "30", "properties": {"latitude": 12.92458671, "longitude": 80.21715185, "predicted_temp": 37.24658197400001}, "type": "Feature"}, {"bbox": [80.29391915, 13.00527691, 80.29391915, 13.00527691], "geometry": {"coordinates": [80.29391915, 13.00527691], "type": "Point"}, "id": "31", "properties": {"latitude": 13.00527691, "longitude": 80.29391915, "predicted_temp": 34.88879587210001}, "type": "Feature"}, {"bbox": [80.21220604, 13.13947238, 80.21220604, 13.13947238], "geometry": {"coordinates": [80.21220604, 13.13947238], "type": "Point"}, "id": "32", "properties": {"latitude": 13.13947238, "longitude": 80.21220604, "predicted_temp": 37.876503393799986}, "type": "Feature"}, {"bbox": [80.10372946, 13.03329132, 80.10372946, 13.03329132], "geometry": {"coordinates": [80.10372946, 13.03329132], "type": "Point"}, "id": "33", "properties": {"latitude": 13.03329132, "longitude": 80.10372946, "predicted_temp": 35.36866766309997}, "type": "Feature"}, {"bbox": [80.26012653, 13.07296928, 80.26012653, 13.07296928], "geometry": {"coordinates": [80.26012653, 13.07296928], "type": "Point"}, "id": "34", "properties": {"latitude": 13.07296928, "longitude": 80.26012653, "predicted_temp": 34.680440997799934}, "type": "Feature"}, {"bbox": [80.14659485, 12.97887891, 80.14659485, 12.97887891], "geometry": {"coordinates": [80.14659485, 12.97887891], "type": "Point"}, "id": "35", "properties": {"latitude": 12.97887891, "longitude": 80.14659485, "predicted_temp": 36.60549744590002}, "type": "Feature"}, {"bbox": [80.26142104, 13.07162523, 80.26142104, 13.07162523], "geometry": {"coordinates": [80.26142104, 13.07162523], "type": "Point"}, "id": "36", "properties": {"latitude": 13.07162523, "longitude": 80.26142104, "predicted_temp": 32.27053010210002}, "type": "Feature"}, {"bbox": [80.17757213, 13.10865642, 80.17757213, 13.10865642], "geometry": {"coordinates": [80.17757213, 13.10865642], "type": "Point"}, "id": "37", "properties": {"latitude": 13.10865642, "longitude": 80.17757213, "predicted_temp": 36.5928898655}, "type": "Feature"}, {"bbox": [80.27270837, 12.90457207, 80.27270837, 12.90457207], "geometry": {"coordinates": [80.27270837, 12.90457207], "type": "Point"}, "id": "38", "properties": {"latitude": 12.90457207, "longitude": 80.27270837, "predicted_temp": 35.874384006100044}, "type": "Feature"}, {"bbox": [80.24942433, 13.08753608, 80.24942433, 13.08753608], "geometry": {"coordinates": [80.24942433, 13.08753608], "type": "Point"}, "id": "39", "properties": {"latitude": 13.08753608, "longitude": 80.24942433, "predicted_temp": 38.0820935726}, "type": "Feature"}, {"bbox": [80.21124805, 13.14721527, 80.21124805, 13.14721527], "geometry": {"coordinates": [80.21124805, 13.14721527], "type": "Point"}, "id": "40", "properties": {"latitude": 13.14721527, "longitude": 80.21124805, "predicted_temp": 35.51659841609999}, "type": "Feature"}, {"bbox": [80.12729105, 13.08704141, 80.12729105, 13.08704141], "geometry": {"coordinates": [80.12729105, 13.08704141], "type": "Point"}, "id": "41", "properties": {"latitude": 13.08704141, "longitude": 80.12729105, "predicted_temp": 39.611667857099945}, "type": "Feature"}, {"bbox": [80.11198354, 12.970111, 80.11198354, 12.970111], "geometry": {"coordinates": [80.11198354, 12.970111], "type": "Point"}, "id": "42", "properties": {"latitude": 12.970111, "longitude": 80.11198354, "predicted_temp": 36.437630185899984}, "type": "Feature"}, {"bbox": [80.12426869, 13.09731983, 80.12426869, 13.09731983], "geometry": {"coordinates": [80.12426869, 13.09731983], "type": "Point"}, "id": "43", "properties": {"latitude": 13.09731983, "longitude": 80.12426869, "predicted_temp": 34.21237488900004}, "type": "Feature"}, {"bbox": [80.10891038, 12.9258065, 80.10891038, 12.9258065], "geometry": {"coordinates": [80.10891038, 12.9258065], "type": "Point"}, "id": "44", "properties": {"latitude": 12.9258065, "longitude": 80.10891038, "predicted_temp": 36.16657732400001}, "type": "Feature"}, {"bbox": [80.12149883, 13.01197338, 80.12149883, 13.01197338], "geometry": {"coordinates": [80.12149883, 13.01197338], "type": "Point"}, "id": "45", "properties": {"latitude": 13.01197338, "longitude": 80.12149883, "predicted_temp": 38.108794114400034}, "type": "Feature"}, {"bbox": [80.14514187, 13.12714888, 80.14514187, 13.12714888], "geometry": {"coordinates": [80.14514187, 13.12714888], "type": "Point"}, "id": "46", "properties": {"latitude": 13.12714888, "longitude": 80.14514187, "predicted_temp": 32.465338130699955}, "type": "Feature"}, {"bbox": [80.2425978, 12.97340354, 80.2425978, 12.97340354], "geometry": {"coordinates": [80.2425978, 12.97340354], "type": "Point"}, "id": "47", "properties": {"latitude": 12.97340354, "longitude": 80.2425978, "predicted_temp": 35.877486470400015}, "type": "Feature"}, {"bbox": [80.2119434, 12.97194383, 80.2119434, 12.97194383], "geometry": {"coordinates": [80.2119434, 12.97194383], "type": "Point"}, "id": "48", "properties": {"latitude": 12.97194383, "longitude": 80.2119434, "predicted_temp": 37.08695979180001}, "type": "Feature"}, {"bbox": [80.1025112, 12.93250714, 80.1025112, 12.93250714], "geometry": {"coordinates": [80.1025112, 12.93250714], "type": "Point"}, "id": "49", "properties": {"latitude": 12.93250714, "longitude": 80.1025112, "predicted_temp": 38.775342064499995}, "type": "Feature"}, {"bbox": [80.11439486, 12.90484174, 80.11439486, 12.90484174], "geometry": {"coordinates": [80.11439486, 12.90484174], "type": "Point"}, "id": "50", "properties": {"latitude": 12.90484174, "longitude": 80.11439486, "predicted_temp": 32.735068669600054}, "type": "Feature"}, {"bbox": [80.29345527, 13.06970888, 80.29345527, 13.06970888], "geometry": {"coordinates": [80.29345527, 13.06970888], "type": "Point"}, "id": "51", "properties": {"latitude": 13.06970888, "longitude": 80.29345527, "predicted_temp": 39.02001837359996}, "type": "Feature"}, {"bbox": [80.21362009, 12.95290703, 80.21362009, 12.95290703], "geometry": {"coordinates": [80.21362009, 12.95290703], "type": "Point"}, "id": "52", "properties": {"latitude": 12.95290703, "longitude": 80.21362009, "predicted_temp": 34.36960518899998}, "type": "Feature"}, {"bbox": [80.14065865, 12.96638666, 80.14065865, 12.96638666], "geometry": {"coordinates": [80.14065865, 12.96638666], "type": "Point"}, "id": "53", "properties": {"latitude": 12.96638666, "longitude": 80.14065865, "predicted_temp": 36.40698914860001}, "type": "Feature"}, {"bbox": [80.15046515, 13.02289329, 80.15046515, 13.02289329], "geometry": {"coordinates": [80.15046515, 13.02289329], "type": "Point"}, "id": "54", "properties": {"latitude": 13.02289329, "longitude": 80.15046515, "predicted_temp": 37.397472060500014}, "type": "Feature"}, {"bbox": [80.24876517, 12.91334064, 80.24876517, 12.91334064], "geometry": {"coordinates": [80.24876517, 12.91334064], "type": "Point"}, "id": "55", "properties": {"latitude": 12.91334064, "longitude": 80.24876517, "predicted_temp": 39.61639197190006}, "type": "Feature"}, {"bbox": [80.1390859, 13.0435294, 80.1390859, 13.0435294], "geometry": {"coordinates": [80.1390859, 13.0435294], "type": "Point"}, "id": "56", "properties": {"latitude": 13.0435294, "longitude": 80.1390859, "predicted_temp": 35.93689279569994}, "type": "Feature"}, {"bbox": [80.21627179, 12.93668214, 80.21627179, 12.93668214], "geometry": {"coordinates": [80.21627179, 12.93668214], "type": "Point"}, "id": "57", "properties": {"latitude": 12.93668214, "longitude": 80.21627179, "predicted_temp": 36.87295964379999}, "type": "Feature"}, {"bbox": [80.294004, 13.04732638, 80.294004, 13.04732638], "geometry": {"coordinates": [80.294004, 13.04732638], "type": "Point"}, "id": "58", "properties": {"latitude": 13.04732638, "longitude": 80.294004, "predicted_temp": 34.368672480900024}, "type": "Feature"}, {"bbox": [80.26936576, 13.07493959, 80.26936576, 13.07493959], "geometry": {"coordinates": [80.26936576, 13.07493959], "type": "Point"}, "id": "59", "properties": {"latitude": 13.07493959, "longitude": 80.26936576, "predicted_temp": 36.84210300019998}, "type": "Feature"}, {"bbox": [80.14796955, 12.92558361, 80.14796955, 12.92558361], "geometry": {"coordinates": [80.14796955, 12.92558361], "type": "Point"}, "id": "60", "properties": {"latitude": 12.92558361, "longitude": 80.14796955, "predicted_temp": 38.984703136799936}, "type": "Feature"}, {"bbox": [80.19875394, 13.003514, 80.19875394, 13.003514], "geometry": {"coordinates": [80.19875394, 13.003514], "type": "Point"}, "id": "61", "properties": {"latitude": 13.003514, "longitude": 80.19875394, "predicted_temp": 37.849007527700024}, "type": "Feature"}, {"bbox": [80.22399114, 13.07360004, 80.22399114, 13.07360004], "geometry": {"coordinates": [80.22399114, 13.07360004], "type": "Point"}, "id": "62", "properties": {"latitude": 13.07360004, "longitude": 80.22399114, "predicted_temp": 38.20765255929997}, "type": "Feature"}, {"bbox": [80.26579618, 13.00354482, 80.26579618, 13.00354482], "geometry": {"coordinates": [80.26579618, 13.00354482], "type": "Point"}, "id": "63", "properties": {"latitude": 13.00354482, "longitude": 80.26579618, "predicted_temp": 37.61554176130003}, "type": "Feature"}, {"bbox": [80.13135828, 12.91248836, 80.13135828, 12.91248836], "geometry": {"coordinates": [80.13135828, 12.91248836], "type": "Point"}, "id": "64", "properties": {"latitude": 12.91248836, "longitude": 80.13135828, "predicted_temp": 38.86344618379998}, "type": "Feature"}, {"bbox": [80.10371524, 13.0339741, 80.10371524, 13.0339741], "geometry": {"coordinates": [80.10371524, 13.0339741], "type": "Point"}, "id": "65", "properties": {"latitude": 13.0339741, "longitude": 80.10371524, "predicted_temp": 35.15250684499997}, "type": "Feature"}, {"bbox": [80.11400443, 13.06594866, 80.11400443, 13.06594866], "geometry": {"coordinates": [80.11400443, 13.06594866], "type": "Point"}, "id": "66", "properties": {"latitude": 13.06594866, "longitude": 80.11400443, "predicted_temp": 37.492469498599995}, "type": "Feature"}, {"bbox": [80.19726902, 13.02872228, 80.19726902, 13.02872228], "geometry": {"coordinates": [80.19726902, 13.02872228], "type": "Point"}, "id": "67", "properties": {"latitude": 13.02872228, "longitude": 80.19726902, "predicted_temp": 36.04319858949996}, "type": "Feature"}, {"bbox": [80.22126589, 13.13614869, 80.22126589, 13.13614869], "geometry": {"coordinates": [80.22126589, 13.13614869], "type": "Point"}, "id": "68", "properties": {"latitude": 13.13614869, "longitude": 80.22126589, "predicted_temp": 35.03750373450002}, "type": "Feature"}, {"bbox": [80.21377029, 13.04663876, 80.21377029, 13.04663876], "geometry": {"coordinates": [80.21377029, 13.04663876], "type": "Point"}, "id": "69", "properties": {"latitude": 13.04663876, "longitude": 80.21377029, "predicted_temp": 36.02839278000006}, "type": "Feature"}, {"bbox": [80.16347248, 13.12585048, 80.16347248, 13.12585048], "geometry": {"coordinates": [80.16347248, 13.12585048], "type": "Point"}, "id": "70", "properties": {"latitude": 13.12585048, "longitude": 80.16347248, "predicted_temp": 36.3562630317}, "type": "Feature"}, {"bbox": [80.29772323, 12.93436868, 80.29772323, 12.93436868], "geometry": {"coordinates": [80.29772323, 12.93436868], "type": "Point"}, "id": "71", "properties": {"latitude": 12.93436868, "longitude": 80.29772323, "predicted_temp": 35.1782294539}, "type": "Feature"}, {"bbox": [80.21594904, 12.93481909, 80.21594904, 12.93481909], "geometry": {"coordinates": [80.21594904, 12.93481909], "type": "Point"}, "id": "72", "properties": {"latitude": 12.93481909, "longitude": 80.21594904, "predicted_temp": 36.848203255100046}, "type": "Feature"}, {"bbox": [80.17602823, 13.10184782, 80.17602823, 13.10184782], "geometry": {"coordinates": [80.17602823, 13.10184782], "type": "Point"}, "id": "73", "properties": {"latitude": 13.10184782, "longitude": 80.17602823, "predicted_temp": 35.1026981387}, "type": "Feature"}, {"bbox": [80.21018964, 12.99941921, 80.21018964, 12.99941921], "geometry": {"coordinates": [80.21018964, 12.99941921], "type": "Point"}, "id": "74", "properties": {"latitude": 12.99941921, "longitude": 80.21018964, "predicted_temp": 39.29682495149994}, "type": "Feature"}, {"bbox": [80.24906689, 12.94133855, 80.24906689, 12.94133855], "geometry": {"coordinates": [80.24906689, 12.94133855], "type": "Point"}, "id": "75", "properties": {"latitude": 12.94133855, "longitude": 80.24906689, "predicted_temp": 37.62682808900006}, "type": "Feature"}, {"bbox": [80.23384658, 13.13187715, 80.23384658, 13.13187715], "geometry": {"coordinates": [80.23384658, 13.13187715], "type": "Point"}, "id": "76", "properties": {"latitude": 13.13187715, "longitude": 80.23384658, "predicted_temp": 36.84403557620001}, "type": "Feature"}, {"bbox": [80.15298391, 12.98694146, 80.15298391, 12.98694146], "geometry": {"coordinates": [80.15298391, 12.98694146], "type": "Point"}, "id": "77", "properties": {"latitude": 12.98694146, "longitude": 80.15298391, "predicted_temp": 34.31073915150001}, "type": "Feature"}, {"bbox": [80.11326697, 13.08770303, 80.11326697, 13.08770303], "geometry": {"coordinates": [80.11326697, 13.08770303], "type": "Point"}, "id": "78", "properties": {"latitude": 13.08770303, "longitude": 80.11326697, "predicted_temp": 35.0153372452}, "type": "Feature"}, {"bbox": [80.17401684, 13.0814995, 80.17401684, 13.0814995], "geometry": {"coordinates": [80.17401684, 13.0814995], "type": "Point"}, "id": "79", "properties": {"latitude": 13.0814995, "longitude": 80.17401684, "predicted_temp": 39.23401025199996}, "type": "Feature"}, {"bbox": [80.2259435, 13.12082652, 80.2259435, 13.12082652], "geometry": {"coordinates": [80.2259435, 13.12082652], "type": "Point"}, "id": "80", "properties": {"latitude": 13.12082652, "longitude": 80.2259435, "predicted_temp": 36.112253883599976}, "type": "Feature"}, {"bbox": [80.1420348, 13.05591805, 80.1420348, 13.05591805], "geometry": {"coordinates": [80.1420348, 13.05591805], "type": "Point"}, "id": "81", "properties": {"latitude": 13.05591805, "longitude": 80.1420348, "predicted_temp": 38.50639294879998}, "type": "Feature"}, {"bbox": [80.25055111, 13.08773561, 80.25055111, 13.08773561], "geometry": {"coordinates": [80.25055111, 13.08773561], "type": "Point"}, "id": "82", "properties": {"latitude": 13.08773561, "longitude": 80.25055111, "predicted_temp": 38.1056719941}, "type": "Feature"}, {"bbox": [80.1133073, 12.98722459, 80.1133073, 12.98722459], "geometry": {"coordinates": [80.1133073, 12.98722459], "type": "Point"}, "id": "83", "properties": {"latitude": 12.98722459, "longitude": 80.1133073, "predicted_temp": 38.673607479400005}, "type": "Feature"}, {"bbox": [80.15206302, 12.96748197, 80.15206302, 12.96748197], "geometry": {"coordinates": [80.15206302, 12.96748197], "type": "Point"}, "id": "84", "properties": {"latitude": 12.96748197, "longitude": 80.15206302, "predicted_temp": 34.18079885549996}, "type": "Feature"}, {"bbox": [80.26095091, 13.12397155, 80.26095091, 13.12397155], "geometry": {"coordinates": [80.26095091, 13.12397155], "type": "Point"}, "id": "85", "properties": {"latitude": 13.12397155, "longitude": 80.26095091, "predicted_temp": 39.42839500610004}, "type": "Feature"}, {"bbox": [80.13868686, 13.0070228, 80.13868686, 13.0070228], "geometry": {"coordinates": [80.13868686, 13.0070228], "type": "Point"}, "id": "86", "properties": {"latitude": 13.0070228, "longitude": 80.13868686, "predicted_temp": 35.54909193000003}, "type": "Feature"}, {"bbox": [80.22789218, 13.14121001, 80.22789218, 13.14121001], "geometry": {"coordinates": [80.22789218, 13.14121001], "type": "Point"}, "id": "87", "properties": {"latitude": 13.14121001, "longitude": 80.22789218, "predicted_temp": 38.766973218000054}, "type": "Feature"}, {"bbox": [80.20493406, 13.06586037, 80.20493406, 13.06586037], "geometry": {"coordinates": [80.20493406, 13.06586037], "type": "Point"}, "id": "88", "properties": {"latitude": 13.06586037, "longitude": 80.20493406, "predicted_temp": 36.66643910820002}, "type": "Feature"}, {"bbox": [80.28496159, 13.05542393, 80.28496159, 13.05542393], "geometry": {"coordinates": [80.28496159, 13.05542393], "type": "Point"}, "id": "89", "properties": {"latitude": 13.05542393, "longitude": 80.28496159, "predicted_temp": 37.534100460299946}, "type": "Feature"}, {"bbox": [80.15265935, 12.92868649, 80.15265935, 12.92868649], "geometry": {"coordinates": [80.15265935, 12.92868649], "type": "Point"}, "id": "90", "properties": {"latitude": 12.92868649, "longitude": 80.15265935, "predicted_temp": 39.61273529019998}, "type": "Feature"}, {"bbox": [80.11319222, 13.13737231, 80.11319222, 13.13737231], "geometry": {"coordinates": [80.11319222, 13.13737231], "type": "Point"}, "id": "91", "properties": {"latitude": 13.13737231, "longitude": 80.11319222, "predicted_temp": 37.85947776979991}, "type": "Feature"}, {"bbox": [80.24701319, 13.01247803, 80.24701319, 13.01247803], "geometry": {"coordinates": [80.24701319, 13.01247803], "type": "Point"}, "id": "92", "properties": {"latitude": 13.01247803, "longitude": 80.24701319, "predicted_temp": 36.72094723929998}, "type": "Feature"}, {"bbox": [80.25443561, 13.0445974, 80.25443561, 13.0445974], "geometry": {"coordinates": [80.25443561, 13.0445974], "type": "Point"}, "id": "93", "properties": {"latitude": 13.0445974, "longitude": 80.25443561, "predicted_temp": 36.22652933190005}, "type": "Feature"}, {"bbox": [80.28156317, 13.0020342, 80.28156317, 13.0020342], "geometry": {"coordinates": [80.28156317, 13.0020342], "type": "Point"}, "id": "94", "properties": {"latitude": 13.0020342, "longitude": 80.28156317, "predicted_temp": 35.35449851150001}, "type": "Feature"}, {"bbox": [80.28639441, 12.95925675, 80.28639441, 12.95925675], "geometry": {"coordinates": [80.28639441, 12.95925675], "type": "Point"}, "id": "95", "properties": {"latitude": 12.95925675, "longitude": 80.28639441, "predicted_temp": 33.17108571650004}, "type": "Feature"}, {"bbox": [80.10279031, 13.12584488, 80.10279031, 13.12584488], "geometry": {"coordinates": [80.10279031, 13.12584488], "type": "Point"}, "id": "96", "properties": {"latitude": 13.12584488, "longitude": 80.10279031, "predicted_temp": 35.701323499100035}, "type": "Feature"}, {"bbox": [80.14687242, 13.04341987, 80.14687242, 13.04341987], "geometry": {"coordinates": [80.14687242, 13.04341987], "type": "Point"}, "id": "97", "properties": {"latitude": 13.04341987, "longitude": 80.14687242, "predicted_temp": 32.36176634390004}, "type": "Feature"}, {"bbox": [80.22335567, 12.90071758, 80.22335567, 12.90071758], "geometry": {"coordinates": [80.22335567, 12.90071758], "type": "Point"}, "id": "98", "properties": {"latitude": 12.90071758, "longitude": 80.22335567, "predicted_temp": 39.51903334720004}, "type": "Feature"}, {"bbox": [80.28980326, 13.05428623, 80.28980326, 13.05428623], "geometry": {"coordinates": [80.28980326, 13.05428623], "type": "Point"}, "id": "99", "properties": {"latitude": 13.05428623, "longitude": 80.28980326, "predicted_temp": 34.290756487299966}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_1b6cd0bbbce2e38e2cffe12de728095c.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["predicted_temp"];
+    let aliases = ["Predicted Temp (\u00b0C):"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_1b6cd0bbbce2e38e2cffe12de728095c.addTo(map_2ca5a79f0974bda48109be8141b7f4ff);
+        
+    
+            var layer_control_73d392309f175d3d813bdc638dd5c9ce_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_5127d72c9c3bd7d81504d2d86c6b575f,
+                },
+                overlays :  {
+                    "Urban Heat Predictions" : geo_json_1b6cd0bbbce2e38e2cffe12de728095c,
+                },
+            };
+            let layer_control_73d392309f175d3d813bdc638dd5c9ce = L.control.layers(
+                layer_control_73d392309f175d3d813bdc638dd5c9ce_layers.base_layers,
+                layer_control_73d392309f175d3d813bdc638dd5c9ce_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_2ca5a79f0974bda48109be8141b7f4ff);
+
+        
+</script>
+</html>
